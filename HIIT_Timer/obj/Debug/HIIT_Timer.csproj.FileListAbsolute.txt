@@ -1,0 +1,17 @@
+C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\bin\Debug\HIIT_Timer.exe.config
+C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\bin\Debug\HIIT_Timer.exe
+C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\bin\Debug\HIIT_Timer.pdb
+C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Debug\HIIT_Timer.csprojAssemblyReference.cache
+C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Debug\MainWindow.g.cs
+C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Debug\App.g.cs
+C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Debug\HIIT_Timer_MarkupCompile.cache
+C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Debug\HIIT_Timer_MarkupCompile.lref
+C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Debug\MainWindow.baml
+C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Debug\HIIT_Timer.g.resources
+C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Debug\HIIT_Timer.Properties.Resources.resources
+C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Debug\HIIT_Timer.csproj.GenerateResource.cache
+C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Debug\HIIT_Timer.csproj.CoreCompileInputs.cache
+C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Debug\HIIT_Timer.exe
+C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Debug\HIIT_Timer.pdb
+C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Debug\TimerWindow.g.cs
+C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Debug\TimerWindow.baml

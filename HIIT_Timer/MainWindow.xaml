@@ -1,0 +1,20 @@
+﻿<Window x:Name="HIIT_Timer_Settings" x:Class="HIIT_Timer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HIIT_Timer"
+        mc:Ignorable="d"
+        Title="HIIT Timer Settings" Height="350" Width="410" Background="#FF2E4156" WindowStartupLocation="CenterScreen" Closed="HIIT_Timer_Settings_Closed" ResizeMode="NoResize">
+    <Grid>
+        <Canvas>
+            <Label Content="EXERCISE TIME" Canvas.Left="10" Height="70" Width="384" FontSize="45" HorizontalContentAlignment="Center" Foreground="#FF94B2CD"/>
+            <TextBox x:Name="exerciceTimeBox" Height="30" Canvas.Left="127" TextWrapping="Wrap" Text="45" Canvas.Top="79" Width="57" BorderBrush="#FF94B2CD" Foreground="#FF94B2CD" SelectionBrush="White" FontSize="20" GotFocus="exerciceTimeBox_GotFocus" KeyDown="exerciceTimeBox_KeyDown" Background="{x:Null}" TextAlignment="Center"/>
+            <Label Content="seconds" Canvas.Left="184" Canvas.Top="79" Width="79" FontSize="18" Foreground="#FF94B2CD" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+            <Label Content="REST TIME" Canvas.Left="10" Height="70" Width="384" FontSize="45" HorizontalContentAlignment="Center" Canvas.Top="112" Foreground="#FF94B2CD"/>
+            <Label x:Name="restTimeLabel" Content="15" Canvas.Left="127" Canvas.Top="185" Width="57" FontSize="20" Height="35" Foreground="#FF94B2CD" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label Content="seconds" Canvas.Left="184" Canvas.Top="187" Width="79" FontSize="18" Foreground="#FF94B2CD" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+            <Button x:Name="startButton" Content="Let's Go" Canvas.Top="236" Width="350" Height="60" FontSize="40" Click="startButton_Click" BorderBrush="#FF2E4168" Foreground="#FF14516F" Background="#FF5FBAEB" Canvas.Left="22"/>
+        </Canvas>
+    </Grid>
+</Window>
