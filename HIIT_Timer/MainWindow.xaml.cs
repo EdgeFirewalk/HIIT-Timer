@@ -21,7 +21,7 @@ namespace HIIT_Timer
         private int exerciseTime = 45; // Seconds
         private int restTime = 15;    // Seconds
 
-        TimerWindow timerWin; // Reference to window with timer
+        private TimerWindow timerWin; // Reference to window with timer
 
         public MainWindow()
         {

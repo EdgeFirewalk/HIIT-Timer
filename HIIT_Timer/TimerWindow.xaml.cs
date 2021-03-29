@@ -29,8 +29,8 @@ namespace HIIT_Timer
         private DispatcherTimer timer;
         private bool timerIsRunning = true;
 
-        SoundPlayer countdownSound = new SoundPlayer();
-        SoundPlayer countdownStopSound = new SoundPlayer();
+        private SoundPlayer countdownSound = new SoundPlayer();
+        private SoundPlayer countdownStopSound = new SoundPlayer();
 
         public TimerWindow(int exerciseTime, int restTime, MainWindow mainWin)
         {
@@ -38,6 +38,7 @@ namespace HIIT_Timer
             restTimeFromMain = restTime;
             this.mainWin = mainWin;
 
+            // Trying to load audio files
             try
             {
                 countdownSound.SoundLocation = "Media\\Countdown.wav";
@@ -46,7 +47,7 @@ namespace HIIT_Timer
                 countdownStopSound.SoundLocation = "Media\\CountdownStop.wav";
                 countdownStopSound.Load();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Some audio files were not found...");
             }
@@ -73,33 +74,11 @@ namespace HIIT_Timer
         {
             if (exerciseTime != 0)
             {
-                // Working Out
-                stageLabel.Content = "Working Out!";
-                exerciseTime--;
-                timeLabel.Content = Convert.ToString(exerciseTime);
-                if (exerciseTime <= 5 && exerciseTime > 0)
-                {
-                    countdownSound.Play();
-                }
-                else if (exerciseTime == 0)
-                {
-                    countdownStopSound.Play();
-                }
+                WorkingOut();
             }
             else if (exerciseTime == 0 && restTime != 0)
             {
-                // Rest break
-                stageLabel.Content = "Rest Break!";
-                restTime--;
-                timeLabel.Content = Convert.ToString(restTime);
-                if (restTime <= 5 && restTime > 0)
-                {
-                    countdownSound.Play();
-                }
-                else if (restTime == 0)
-                {
-                    countdownStopSound.Play();
-                }
+                RestBreak();
             }
             else if (exerciseTime == 0 & restTime == 0)
             {
@@ -108,6 +87,50 @@ namespace HIIT_Timer
 
                 exerciseTime = exerciseTimeFromMain; //
                 restTime = restTimeFromMain;        // Zeroing variables to start timer again
+            }
+        }
+
+        private void WorkingOut()
+        {
+            stageLabel.Content = "Working Out!";
+
+            exerciseTime--;
+
+            timeLabel.Content = Convert.ToString(exerciseTime);
+
+            if (exerciseTime <= 5 && exerciseTime > 0)
+            {
+                countdownSound.Play();
+            }
+            else if (exerciseTime == 0)
+            {
+                countdownStopSound.Play();
+
+                // Do not show the 0 second (Just jump onto next step)
+                timeLabel.Content = Convert.ToString(restTime);
+                stageLabel.Content = "Rest Break!";
+            }
+        }
+
+        private void RestBreak()
+        {
+            stageLabel.Content = "Rest Break!";
+
+            restTime--;
+
+            timeLabel.Content = Convert.ToString(restTime);
+
+            if (restTime <= 5 && restTime > 0)
+            {
+                countdownSound.Play();
+            }
+            else if (restTime == 0)
+            {
+                countdownStopSound.Play();
+
+                // Do not show the 0 second (Just jump onto next step)
+                timeLabel.Content = Convert.ToString(exerciseTime);
+                stageLabel.Content = "Working Out!";
             }
         }
 
