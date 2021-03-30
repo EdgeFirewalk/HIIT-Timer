@@ -81,6 +81,8 @@ namespace HIIT_Timer
         {
             timeLabel.Foreground = Brushes.White;
             stageLabel.Content = "Working Out!";
+            
+            exerciseLabel.Content = Convert.ToString($"Exercise: {exerciseNumber}");
 
             exerciseTime--;
 
@@ -174,7 +176,8 @@ namespace HIIT_Timer
             }
             else if (e.Key == Key.Enter && resting)
             {
-                exerciseTime = exerciseTimeFromMain; // Zeroing variable
+                exerciseTime = ++exerciseTimeFromMain; // Zeroing variable (Increment it to avoid losing one second)
+                exerciseNumber++;
                 resting = false;
                 countdownStopSound.Play();
                 Workout();
