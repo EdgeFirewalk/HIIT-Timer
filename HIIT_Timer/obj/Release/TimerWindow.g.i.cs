@@ -84,7 +84,7 @@ namespace HIIT_Timer {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/HIIT_Timer;component/timerwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/HIIT Timer;component/timerwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\TimerWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

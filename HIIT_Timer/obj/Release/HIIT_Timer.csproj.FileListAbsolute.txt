@@ -15,20 +15,20 @@ C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Release\HIIT_Timer.csproj.
 C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Release\HIIT_Timer.csproj.CoreCompileInputs.cache
 C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Release\HIIT_Timer.exe
 C:\Users\Игорь\Desktop\HIIT_Timer\HIIT_Timer\obj\Release\HIIT_Timer.pdb
-C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\bin\Release\HIIT_Timer.exe.config
-C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\bin\Release\HIIT_Timer.exe
-C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\bin\Release\HIIT_Timer.pdb
 C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\HIIT_Timer.csprojAssemblyReference.cache
 C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\MainWindow.g.cs
 C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\TimerWindow.g.cs
 C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\App.g.cs
-C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\HIIT_Timer_MarkupCompile.cache
-C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\HIIT_Timer_MarkupCompile.lref
 C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\MainWindow.baml
 C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\TimerWindow.baml
-C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\HIIT_Timer.g.resources
 C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\HIIT_Timer.Properties.Resources.resources
 C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\HIIT_Timer.csproj.GenerateResource.cache
 C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\HIIT_Timer.csproj.CoreCompileInputs.cache
-C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\HIIT_Timer.exe
-C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\HIIT_Timer.pdb
+C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\bin\Release\HIIT Timer.exe.config
+C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\bin\Release\HIIT Timer.exe
+C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\bin\Release\HIIT Timer.pdb
+C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\HIIT Timer_MarkupCompile.cache
+C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\HIIT Timer_MarkupCompile.lref
+C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\HIIT Timer.g.resources
+C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\HIIT Timer.exe
+C:\Users\Игорь\Desktop\HIIT-Timer\HIIT-Timer\HIIT_Timer\obj\Release\HIIT Timer.pdb
