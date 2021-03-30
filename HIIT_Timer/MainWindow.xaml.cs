@@ -66,6 +66,14 @@ namespace HIIT_Timer
             this.Hide();
         }
 
+        private void HIIT_Timer_Settings_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                Close();
+            }
+        }
+
         private void HIIT_Timer_Settings_Closed(object sender, EventArgs e)
         {
             timerWin.Close();

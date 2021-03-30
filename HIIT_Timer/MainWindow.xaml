@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HIIT_Timer"
         mc:Ignorable="d"
-        Title="HIIT Timer Settings" Height="350" Width="410" Background="#FF2E4156" WindowStartupLocation="CenterScreen" Closed="HIIT_Timer_Settings_Closed" ResizeMode="NoResize">
+        Title="HIIT Timer Settings" Height="350" Width="410" Background="#FF2E4156" WindowStartupLocation="CenterScreen" Closed="HIIT_Timer_Settings_Closed" ResizeMode="NoResize" KeyDown="HIIT_Timer_Settings_KeyDown">
     <Grid>
         <Canvas>
             <Label Content="EXERCISE TIME" Canvas.Left="10" Height="70" Width="384" FontSize="45" HorizontalContentAlignment="Center" Foreground="#FF94B2CD"/>
