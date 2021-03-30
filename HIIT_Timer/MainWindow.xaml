@@ -14,7 +14,7 @@
             <Label Content="REST TIME" Canvas.Left="10" Height="70" Width="384" FontSize="45" HorizontalContentAlignment="Center" Canvas.Top="112" Foreground="#FF94B2CD"/>
             <Label x:Name="restTimeLabel" Content="15" Canvas.Left="127" Canvas.Top="185" Width="57" FontSize="20" Height="35" Foreground="#FF94B2CD" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
             <Label Content="seconds" Canvas.Left="184" Canvas.Top="187" Width="79" FontSize="18" Foreground="#FF94B2CD" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
-            <Button x:Name="startButton" Content="Let's Go" Canvas.Top="236" Width="350" Height="60" FontSize="40" Click="startButton_Click" BorderBrush="#FF2E4168" Foreground="#FF14516F" Background="#FF5FBAEB" Canvas.Left="22"/>
+            <Button x:Name="startButton" Content="Let's Go!" Canvas.Top="236" Width="350" Height="60" FontSize="40" Click="startButton_Click" BorderBrush="#FF2E4168" Foreground="#FF14516F" Background="#FF5FBAEB" Canvas.Left="22"/>
         </Canvas>
     </Grid>
 </Window>

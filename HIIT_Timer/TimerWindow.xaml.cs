@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows.Threading;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Media;
 
 namespace HIIT_Timer
@@ -21,7 +13,10 @@ namespace HIIT_Timer
         private int restTimeFromMain;    // Time for rest that we get from previous window
 
         private int exerciseTime; // Time for working out (seconds)
+
         private int restTime;    // Time for rest (seconds)
+        private bool resting;
+
         private int exerciseNumber = 1;
 
         private MainWindow mainWin; // Reference to main window (settings window)
@@ -62,7 +57,7 @@ namespace HIIT_Timer
 
             timeLabel.Content = Convert.ToString(exerciseTime);
 
-            exerciseLabel.Content = Convert.ToString($"Exercise: {exerciseNumber++}");
+            exerciseLabel.Content = Convert.ToString($"Exercise: {exerciseNumber}");
 
             timer = new DispatcherTimer();
             timer.Tick += new EventHandler(timer_Tick);
@@ -74,24 +69,17 @@ namespace HIIT_Timer
         {
             if (exerciseTime != 0)
             {
-                WorkingOut();
+                Workout();
             }
-            else if (exerciseTime == 0 && restTime != 0)
+            else
             {
                 RestBreak();
             }
-            else if (exerciseTime == 0 & restTime == 0)
-            {
-                // Exercise completed
-                exerciseLabel.Content = Convert.ToString($"Exercise: {exerciseNumber++}");
-
-                exerciseTime = exerciseTimeFromMain; //
-                restTime = restTimeFromMain;        // Zeroing variables to start timer again
-            }
         }
 
-        private void WorkingOut()
+        private void Workout()
         {
+            timeLabel.Foreground = Brushes.White;
             stageLabel.Content = "Working Out!";
 
             exerciseTime--;
@@ -100,11 +88,14 @@ namespace HIIT_Timer
 
             if (exerciseTime <= 5 && exerciseTime > 0)
             {
+                timeLabel.Foreground = Brushes.LightGreen;
                 countdownSound.Play();
             }
             else if (exerciseTime == 0)
             {
                 countdownStopSound.Play();
+
+                restTime = restTimeFromMain; // Zeroing variable to start timer again
 
                 // Do not show the 0 second (Just jump onto next step)
                 timeLabel.Content = Convert.ToString(restTime);
@@ -114,6 +105,10 @@ namespace HIIT_Timer
 
         private void RestBreak()
         {
+            resting = true;
+
+            timeLabel.Foreground = Brushes.White;
+
             stageLabel.Content = "Rest Break!";
 
             restTime--;
@@ -122,15 +117,21 @@ namespace HIIT_Timer
 
             if (restTime <= 5 && restTime > 0)
             {
+                timeLabel.Foreground = Brushes.Red;
                 countdownSound.Play();
             }
             else if (restTime == 0)
             {
                 countdownStopSound.Play();
 
+                exerciseTime = exerciseTimeFromMain; // Zeroing variable to start timer again
+
                 // Do not show the 0 second (Just jump onto next step)
-                timeLabel.Content = Convert.ToString(exerciseTimeFromMain); // From main 'cause local exercise time = 0
+                timeLabel.Content = Convert.ToString(exerciseTime);
                 stageLabel.Content = "Working Out!";
+
+                // After each rest break you start next exercise
+                exerciseLabel.Content = Convert.ToString($"Exercise: {++exerciseNumber}");
             }
         }
 
@@ -145,6 +146,9 @@ namespace HIIT_Timer
             if (e.Key == Key.Space && timerIsRunning)
             {
                 timer.Stop();
+
+                countdownSound.Play();
+
                 timerIsRunning = false;
 
                 timeLabel.Foreground = Brushes.CornflowerBlue;
@@ -152,12 +156,31 @@ namespace HIIT_Timer
             else if (e.Key == Key.Space && !timerIsRunning)
             {
                 timer.Start();
+
+                countdownStopSound.Play();
+
                 timerIsRunning = true;
 
                 timeLabel.Foreground = Brushes.White;
             }
 
-            else if (e.Key == Key.Escape)
+            if (e.Key == Key.Up && resting && restTime < 1000)
+            {
+                restTime += 10;
+            }
+            else if (e.Key == Key.Down && resting && restTime > 10)
+            {
+                restTime -= 10;
+            }
+            else if (e.Key == Key.Enter && resting)
+            {
+                exerciseTime = exerciseTimeFromMain; // Zeroing variable
+                resting = false;
+                countdownStopSound.Play();
+                Workout();
+            }
+
+            if (e.Key == Key.Escape)
             {
                 Close();
             }
