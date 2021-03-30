@@ -176,7 +176,7 @@ namespace HIIT_Timer
             }
             else if (e.Key == Key.Enter && resting)
             {
-                exerciseTime = ++exerciseTimeFromMain; // Zeroing variable (Increment it to avoid losing one second)
+                exerciseTime = exerciseTimeFromMain + 1; // Zeroing variable (Plus one to not lose one second)
                 exerciseNumber++;
                 resting = false;
                 countdownStopSound.Play();
