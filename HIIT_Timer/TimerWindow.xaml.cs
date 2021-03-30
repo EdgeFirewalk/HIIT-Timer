@@ -129,7 +129,7 @@ namespace HIIT_Timer
                 countdownStopSound.Play();
 
                 // Do not show the 0 second (Just jump onto next step)
-                timeLabel.Content = Convert.ToString(exerciseTime);
+                timeLabel.Content = Convert.ToString(exerciseTimeFromMain); // From main 'cause local exercise time = 0
                 stageLabel.Content = "Working Out!";
             }
         }
