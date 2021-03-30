@@ -122,7 +122,7 @@ namespace HIIT_Timer
                 timeLabel.Foreground = Brushes.Red;
                 countdownSound.Play();
             }
-            else if (restTime == 0)
+            else if (restTime <= 0)
             {
                 countdownStopSound.Play();
 
