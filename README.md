@@ -1,2 +1,2 @@
 # HIIT Timer
- A timer for HIIT type of workouts
+ A very simple timer for HIIT type of workouts
